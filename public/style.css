@@ -1,0 +1,54 @@
+*{
+  margin:0;
+  padding:0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: url("coffee.png");
+}
+.jumbotron{
+  width: 60%;
+  margin-left: 20%;
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+.indexh1{
+  font-size: 5rem;
+  font-weight: 900;
+}
+.indexContain{
+  overflow: auto;
+}
+img{
+  height: 200px;
+}
+
+.flex{
+  display: flex;
+}
+.ordered, .completed{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border: 3px solid gray;
+}
+ul{
+  list-style-type: none;
+}
+li>span{
+margin-right: 20px;
+}
+.orderId{
+  display: none;
+}
+.profileJumbo{
+height: 70vh;
+}

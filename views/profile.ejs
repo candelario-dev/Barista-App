@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>Barista App</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="profileContain">
+
+<section class="jumbotron text-center profileJumbo">
+
+    <div class="page-header text-center">
+      <% if (user.local.email) { %>
+        <h1>Hello: <span id="barista"><%= user.local.email %></span></h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <% } %>
+    </div>
+
+<section class="flex">
+        <!-- ORDER INPUT & TO BE COMPLETED -->
+        <div class="ordered">
+          <h3>ORDERS</h3>
+
+          <ul class="orders">
+          <% for(var i=0; i<orders.length; i++) { %>
+              <% if (orders[i].complete == "no") { %>
+            <li class="orderCurr">
+              <span><%= orders[i].name %></span>
+              <span><%= orders[i].order %></span>
+              <span><i class="fa fa-check" aria-hidden="true"></i></span>
+              <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+    <% } %>
+  </div>
+
+        <!-- COMPLETED ORDERS -->
+        <div class="completed">
+          <h3>COMPLETED</h3>
+          <ul class="orders">
+
+          <% for(var i=0; i<orders.length; i++) {%>
+     <% if (orders[i].complete === "yes") { %>
+            <li class="orderComp">
+              <span><%= orders[i].name %></span>
+              <span><%= orders[i].order %></span>
+              <span><%= orders[i].barista %></span>
+              <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+<% } %>
+    </div>
+
+
+</section>
+</section>
+</section>
+<script src="main.js"></script>
+
+</body>
+</html>
